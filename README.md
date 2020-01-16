@@ -1,2 +1,2 @@
 # board-api
-Storage and delivery service ads'. Ads are stored in the database data's. The service provides an API, working over HTTP in the format JSON.
+Cервис для хранения и подачи объявлений. Объявления хранятся в базе данных. Сервис предоставляет API, работающее поверх HTTP в формате JSON.
