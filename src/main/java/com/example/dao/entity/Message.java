@@ -8,7 +8,7 @@ import java.util.Objects;
  *   Класс-сущность для работы с сообщениями
  */
 @Entity
-public class Message {
+public class Message implements Comparable<Message>{
     @Id
     @GeneratedValue
     private Long id;
@@ -105,5 +105,10 @@ public class Message {
     @Override
     public int hashCode() {
         return Objects.hash(id, chat, author, text, created_at);
+    }
+
+    @Override
+    public int compareTo(Message o) {
+        return (int) (this.getCreated_at().getTime() - o.getCreated_at().getTime());
     }
 }

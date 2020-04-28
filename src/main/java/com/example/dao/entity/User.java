@@ -37,6 +37,10 @@ public class User {
 
     public User(String id) { this.id = Long.valueOf(id); }
 
+    public User(long id) {
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }

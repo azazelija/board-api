@@ -12,6 +12,11 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    /**
+     * Добавить нового пользователя
+     * @param user
+     * @return id
+     */
     @PostMapping(value = "/users/add")
     public @ResponseBody
     Long createUser(@RequestBody User user) {

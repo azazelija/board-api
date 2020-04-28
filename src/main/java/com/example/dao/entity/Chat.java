@@ -10,7 +10,7 @@ import java.util.Set;
  *   Класс-сущность для работы с чатом
  */
 @Entity
-public class Chat {
+public class Chat implements Comparable<Chat>{
     @Id
     @GeneratedValue
     private Long id;
@@ -39,6 +39,10 @@ public class Chat {
     private Date created_at;
 
     public Chat() {}
+
+    public Chat(long id) {
+        this.id = id;
+    }
 
     public Long getId() {
         return id;
@@ -96,5 +100,10 @@ public class Chat {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, users, created_at);
+    }
+
+    @Override
+    public int compareTo(Chat o) {
+        return (int) (this.getCreated_at().getTime() - o.getCreated_at().getTime());
     }
 }
