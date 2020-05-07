@@ -26,7 +26,7 @@ public class Chat implements Comparable<Chat>{
      */
     @ManyToMany(cascade = {
             CascadeType.MERGE
-    })
+    }, fetch = FetchType.LAZY)
     @JoinTable(name = "CHAT_USER",
             joinColumns = @JoinColumn(name = "CHAT_ID"),
             inverseJoinColumns = @JoinColumn(name = "USER_ID")

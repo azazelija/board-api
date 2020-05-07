@@ -2,7 +2,7 @@ POST http://localhost:9000/users/add
 Content-Type: application/json
 
 {
-  "username": "user_13"
+  "username": "user_14"
 }
 
 <> 2020-04-28T115447.200.json
@@ -12,7 +12,7 @@ POST http://localhost:9000/chats/add
 Content-Type: application/json
 
 {
-  "name": "chat_5",
+  "name": "chat_6",
   "users": [
     "2",
     "3",
