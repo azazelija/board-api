@@ -41,7 +41,6 @@ public class MessageServiceImpl implements MessageService {
             throw new DaoException();
     }
 
-    //решить проблему рекурсии
     @Override
     public Set<Message> getMessages(Chat chat) {
         Set<Message> messages = new TreeSet<>();

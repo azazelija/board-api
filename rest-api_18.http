@@ -2,7 +2,7 @@ POST http://localhost:9000/users/add
 Content-Type: application/json
 
 {
-  "username": "user_14"
+  "username": "user_15"
 }
 
 <> 2020-04-28T115447.200.json

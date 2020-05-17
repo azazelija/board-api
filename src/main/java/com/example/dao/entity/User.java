@@ -1,5 +1,7 @@
 package com.example.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
@@ -28,9 +30,11 @@ public class User {
     private Date created_at;
 
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<Chat> chats = new HashSet<>();
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
     private Set<Message> messages = new HashSet<>();
 
     public User() { }

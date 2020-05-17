@@ -25,7 +25,6 @@ public class ChatServiceImpl implements ChatService {
         return chatRepository.save(chat).getId();
     }
 
-    //сделать так чтобы не происходила рекурсия
     @Override
     public Set<Chat> getChats(User user) {
         return new TreeSet<Chat>(userRepository.findById(user.getId())

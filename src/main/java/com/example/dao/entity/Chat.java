@@ -1,5 +1,7 @@
 package com.example.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
@@ -27,6 +29,7 @@ public class Chat implements Comparable<Chat>{
     @ManyToMany(cascade = {
             CascadeType.MERGE
     }, fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinTable(name = "CHAT_USER",
             joinColumns = @JoinColumn(name = "CHAT_ID"),
             inverseJoinColumns = @JoinColumn(name = "USER_ID")

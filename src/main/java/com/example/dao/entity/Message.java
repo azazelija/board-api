@@ -1,5 +1,7 @@
 package com.example.dao.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
@@ -25,6 +27,7 @@ public class Message implements Comparable<Message>{
      */
     @ManyToOne
     @JoinColumn(name = "USER_ID", nullable = false)
+    @JsonIgnore
     private User author;
 
     /**
